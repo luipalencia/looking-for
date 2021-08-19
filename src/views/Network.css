@@ -1,0 +1,10 @@
+.search-section {
+    display: flex;
+    flex-direction: column; 
+}
+.logo-icon {
+    width: 60%;
+    display: block;
+    margin: auto;
+    margin-top: 100px;
+}
