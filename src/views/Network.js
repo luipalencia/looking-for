@@ -84,11 +84,12 @@ const Network = () => {
             autoFocus
           />
         
-       <Link to="/News" className="btn bg-primary text-white mt-3" type="submit">Buscar</Link>
+       <Link to="/News" className="btn bg-primary text-white mt-3 btn-search" type="submit">Buscar</Link>
         </div>
       </form>
 </section>
-
+<div className="d-flex m-4"></div>
+<div className="d-flex m-5"></div>
 <section className="navbar navbar-expand-lg navbar-light bg-light d-flex">
 <ul className="nav nav-pills">
   <li className="nav-item">

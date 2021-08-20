@@ -1,6 +1,13 @@
-.img-profile {
+/* .img-profile {
     padding: .25rem;
     border-radius: .25rem;
     max-width: 100%;
     height: auto;
+} */
+.img-profile {
+    height: 100px;
+    width: 100px;
+    padding: .25rem;
+    border-radius: .25rem;
+    max-width: 100%;
 }
