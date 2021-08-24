@@ -1,7 +1,7 @@
 import './Network.css'
 import { Fragment } from 'react-is';
 import { Link } from 'react-router-dom';
-import google from "../assets/google.png"
+import google from "../assets/logo.png"
 import React from "react";
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
 

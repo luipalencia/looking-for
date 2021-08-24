@@ -1,7 +1,7 @@
 import { Fragment } from 'react-is';
 import { Link } from 'react-router-dom';
-import lies from "../assets/lies.jpeg"
-import censura from "../assets/censura.jpg"
+import img3 from "../assets/img-3.jpg"
+import img4 from "../assets/img-4.jpg"
 import './News.css'
 
 const News = () => {
@@ -56,28 +56,35 @@ const News = () => {
     <h5 className="card-title text-primary"> BLANQUITA YAÑEZ, SE REVELAN INCONSISTENCIA EN SU RELATO</h5>
     <p>www.tunoticialdia.com</p>
     <p className="card-text">El proceso más incendiario que se tramita en Tribunales amenaza con recargarse…</p>
+    <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+  Ver noticia
+</button>
   </div>
 </div>
 
 <div className="card p-1 mb-3 m-1">
   <div className="card-body">
     <h5 className="card-title text-primary">SENADOR VASQUEZ DESESTIMA VERSIÓN DE BLANQUITA YAÑEZ</h5>
-    <p>www.tunoticialdia.com</p>
+    <p>www.pesquisaonline.cl</p>
     <p className="card-text">La principal acusadora del senador mantiene sus dichos mientras su relato pierde…</p>
+    <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+  Ver noticia
+</button>
   </div>
 </div>
 
 <h2 className="font-weight-light m-2">NOTICIAS DESTACADAS</h2>
 <div className="card p-1 mb-3 m-1">
   <div className="card-body">
-  <img className="card-img-top" src={lies} alt="Card cap"/>
-  <p>www.tunoticialdia.com</p>
+  <img className="card-img-top" src={img3} alt="Card cap"/>
+  <p> www.elsuceso.cl</p>
     <h5 className="card-title text-primary">LAS MENTIRAS DE BLANQUITA UNA POR UNA </h5>
     <p className="card-text">Detalles perversos de la red de mentiras en que Blanquita metió a…</p>
     <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
   Ver noticia
 </button>
 
+{/* Modal noticia */}
 <div className="modal fade" id="exampleModal1" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div className="modal-dialog">
     <div className="modal-content">
@@ -85,7 +92,7 @@ const News = () => {
         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div className="modal-body">
-      <img className="card-img-top" src={lies} alt="Card cap"/>
+      <img className="card-img-top" src={img3} alt="Card cap"/>
       <h3>
   Fancy display heading
   <small className="text-muted">With faded secondary text</small>
@@ -113,19 +120,24 @@ const News = () => {
   <div className="card-body">
     <h5 className="card-title text-primary">BLANQUITA, EL FRAUDE CON CARA DE NIÑA</h5>
     <p className="card-text">With supporting text below as a natural lead-in to additional content</p>
-    <p>www.tunoticialdia.com</p>
+    <p>www.ciudadanos.cl</p>
+    <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+  Ver noticia
+</button>
   </div>
 </div>
 
 <div className="card p-1 mb-3 m-1">
   <div className="card-body">
-  <img className="card-img-top" src={censura} alt="Card cap"/>
-  <p>www.tunoticialdia.com</p>
+  <img className="card-img-top" src={img4} alt="Card cap"/>
+  <p>www.infourbana.cl</p>
    <h5 className="card-title text-primary">VIDEO INTIMO DE BLANCA YAÑEZ ES OBJETO DE MORBO EN INTERNET </h5>
     <p className="card-text">El proceso más incendiario que se tramita en Tribunales amenaza con recargarse…</p>
     <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
   Ver noticia
 </button>
+
+{/* Modal noticia */}
 <div className="modal fade" id="exampleModal2" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div className="modal-dialog">
     <div className="modal-content">
@@ -133,7 +145,7 @@ const News = () => {
         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div className="modal-body">
-      <img className="card-img-top" src={censura} alt="Card cap"/>
+      <img className="card-img-top" src={img4} alt="Card cap"/>
       <h3>
   Fancy display heading
   <small className="text-muted">With faded secondary text</small>
@@ -148,10 +160,30 @@ const News = () => {
     </div>
   </div>
 </div>
+</div>
+</div>
 
+<div className="card p-1 mb-3 m-1">
+  <div className="card-body">
+    <h5 className="card-title text-primary">COLUMNA DE OPINIÓN POR LEÓN CAMBLOR</h5>
+    <p className="card-text">¿Quién realmente gana con el fraude de Blanquita?</p>
+    <p>www.endirecto.cl</p>
+    <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+  Ver noticia
+</button>
   </div>
 </div>
 
+<div className="card p-1 mb-3 m-1">
+  <div className="card-body">
+    <h5 className="card-title text-primary">PASO A PASO DEL CASO QUE CONMOCIONA EL PAÍS</h5>
+    <p className="card-text">Resentimiento y mentiras, la historia de Blanquita Yañez</p>
+    <p>www.todopasando.cl</p>
+    <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+  Ver noticia
+</button>
+  </div>
+</div>
 
  </section>
  </Fragment>

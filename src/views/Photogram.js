@@ -6,7 +6,17 @@ import img3 from "../assets/img-3.jpg"
 import img4 from "../assets/img-4.jpg"
 import img5 from "../assets/img-5.jpg"
 import img6 from "../assets/img-6.jpg"
+import img7 from "../assets/img-7.jpg"
+import img8 from "../assets/img-8.jpg"
+import img9 from "../assets/img-9.jpg"
+import img10 from "../assets/img-10.jpg"
+import img11 from "../assets/img-11.jpg"
+import img12 from "../assets/img-12.png"
+import img13 from "../assets/img-13.png"
+import img14 from "../assets/img-14.png"
+import logo from "../assets/logoigs.png"
 
+import { Link } from "react-router-dom";
 
 const Photogram = () => {
   const inProcess1 = async () => {
@@ -42,37 +52,56 @@ const Photogram = () => {
     }
   }
 
+  const inProcess5 = async () => {
+    try {
+      await document.querySelector('#img-5').classList.add('d-none');
+    }
+    catch (error) {
+      console.log(error)
+    }
+  }
+
     return ( 
         <Fragment>
-  <nav className="navbar navbar-expand-lg navbar-light">
+  <nav className="navbar navbar-light">
   <div className="container-fluid">
     <ul className="nav nav-pills">
   <li className="nav-item">
-    <h4 className="nav-link text-dark">blanca_yañez ▼</h4>
+    <h5 className="nav-link text-dark mb-0 user-ig"><b>blanca_yañez ▼</b></h5>
   </li>
-
-</ul>
+  <li>
+            <Link to="/Photogram" type="button" className="btn btn-home-icons btn-info m-2 mx-4" style={{width:65, height:42}}>
+            <img src={logo} style={{width:41, height:30}} alt="" />
+            </Link>
+          </li>
+          </ul>
 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-plus-square" viewBox="0 0 16 16">
   <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
   <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
 </svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" fill="currentColor" className="bi bi-list" viewBox="0 0 16 16">
+<Link to="/">
+<svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" fill="gray" className="bi bi-list" viewBox="0 0 16 16">
   <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
 </svg>
+</Link>
+
   </div>
   <hr style={{marginTop: 0}}/>
 </nav>
+
+
+
 <hr style={{marginTop: 0}} />
 <p className="nav-item text-center text-primary">Ver panel de notificaciones </p>
 <hr />
 
-<section className="d-flex">
+<section className="d-flex justify-content-around">
 <div className=""> 
-  <img src={img5}  className="rounded-circle float-left img-profile m-1" alt="" />
+  <img src={img6} className="rounded-circle float-left img-profile m-1" alt="" />
 </div>
 <div className="d-flex m-2 align-items-center"> 
 <div className="">
-<p className="nav-item text-center m-0">9</p>
+<p className="nav-item text-center m-0">130</p>
 <p className="nav-item m-1">Publicac..</p>
 </div>
 <div>
@@ -86,15 +115,15 @@ const Photogram = () => {
 </div>
 </section>
 <section className="title-section">
-<h6 className="nav-link text-dark m-0 p-0 px-3 pt-3">Blanca Yañez</h6>
-<p className="nav-link text-secondary m-0 p-0 px-3">Figura pública</p>
+<h6 className="nav-link text-dark m-0 p-0 px-3 pt-3 mt-1"><b>Blanca Yañez</b></h6>
+
 <div className="d-grid gap-2">
   <button className="btn btn-outline-secondary mx-3 my-3 mb-2" type="button">Edita tu perfil</button>
 </div>
 <div className="text-center">
 <button type="button" className="btn btn-outline-secondary mx-2">Contacto</button>
-  <button type="button" className="btn btn-outline-secondary mx-2">Estadistica</button>
-  <button type="button" className="btn btn-outline-secondary mx-2">Promocion</button>
+  <button type="button" className="btn btn-outline-secondary mx-2">Estadística</button>
+  <button type="button" className="btn btn-outline-secondary mx-2">Promoción</button>
 </div>
 <section className="images-section mt-4">
   <div className="d-flex justify-content-evenly">
@@ -107,16 +136,26 @@ const Photogram = () => {
 </svg>
   </div>
   <hr width="50%" className="mb-1"/>
+
 {/* AQUI VAN LAS IMAGENES */}
-<div className="images-sec d-flex flex-wrap bd-highlight mb-3 mt-0">
-  <img src={img1} id="img-1"/* className="d-none" */ width="120" height="120" alt=""/>
-  <img src={img2} id="img-2" width="120" height="120" alt="" data-bs-toggle="modal" data-bs-target=".exampleModal1"/>
-  <img src={img3} id="img-3" width="120" height="120" alt="" data-bs-toggle="modal" data-bs-target=".exampleModal2"/>
-  <img src={img4} id="img-4" width="120" height="120" alt="" data-bs-toggle="modal" data-bs-target=".exampleModal3"/>
-  <img src={img5} id="img-5" width="120" height="120" alt="" data-bs-toggle="modal" data-bs-target=".exampleModal4"/>
-  <img src={img6} id="img-6" width="120" height="120" alt="" />
-  <img src={img1} id="img-7" width="120" height="120" alt="" />
-</div>
+<div className="images-sec d-flex flex-wrap bd-highlight mb-3 mt-0 justify-content-around">
+  <img src={img1} id="img-1" className="m-1 imgs-row" alt="" data-bs-toggle="modal" data-bs-target=".exampleModal1"/>
+  <img src={img8} id="img-2" className="m-1 imgs-row" alt="" data-bs-toggle="modal" data-bs-target=".exampleModal2"/>
+  <img src={img6} id="img-3" className="m-1 imgs-row" alt="" data-bs-toggle="modal" data-bs-target=".exampleModal3"/>
+  <img src={img9} id="img-4" className="m-1 imgs-row" alt="" data-bs-toggle="modal" data-bs-target=".exampleModal4"/>
+  <img src={img5} id="img-5" className="m-1 imgs-row imgs-row" alt="" data-bs-toggle="modal" data-bs-target=".exampleModal5"/>
+  <img src={img7} id="img-6" className="m-1 imgs-row" alt="" />
+  <img src={img4} id="img-7" className="m-1 imgs-row" alt="" />
+  <img src={img10} id="img-8" className="m-1 imgs-row" alt="" />
+  <img src={img1} id="img-9" className="m-1 imgs-row" alt="" />
+  <img src={img12} id="img-10" className="m-1 imgs-row" alt="" />
+  <img src={img2} id="img-11" className="m-1 imgs-row" alt="" />
+  <img src={img13} id="img-12" className="m-1 imgs-row" alt="" />
+  <img src={img11} id="img-13" className="m-1 imgs-row" alt="" />
+  <img src={img14} id="img-14" className="m-1 imgs-row" alt="" />
+  <img src={img3} id="img-15" className="m-1 imgs-row" alt="" />
+  </div>
+
 {/* modal 1 */}
 <div className="modal fade exampleModal1" id="exampleModal1" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div className="modal-dialog m-4 mt-6">
@@ -133,7 +172,7 @@ const Photogram = () => {
 </div>
 </div>
 {/* modal 2 */}
-<div className="modal fade exampleModal2" id="exampleModal1" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div className="modal fade exampleModal2" id="exampleModal2" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div className="modal-dialog m-4 mt-6">
     <div className="modal-content">
     <button type="button" className="btn btn-outline-danger mx-2 mt-4" onClick={inProcess2} data-bs-dismiss="modal">Eliminar</button>
@@ -148,7 +187,7 @@ const Photogram = () => {
 </div>
 </div>
 {/* modal 3 */}
-<div className="modal fade exampleModal3" id="exampleModal1" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div className="modal fade exampleModal3" id="exampleModal3" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div className="modal-dialog m-4 mt-6">
     <div className="modal-content">
     <button type="button" className="btn btn-outline-danger mx-2 mt-4" onClick={inProcess3} data-bs-dismiss="modal">Eliminar</button>
@@ -163,10 +202,25 @@ const Photogram = () => {
 </div>
 </div>
 {/* modal 4 */}
-<div className="modal fade exampleModal4" id="exampleModal1" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div className="modal fade exampleModal4" id="exampleModal4" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div className="modal-dialog m-4 mt-6">
     <div className="modal-content">
     <button type="button" className="btn btn-outline-danger mx-2 mt-4" onClick={inProcess4} data-bs-dismiss="modal">Eliminar</button>
+  <button type="button" className="btn btn-outline-light text-dark mx-2 mt-2">Archivar</button>
+  <button type="button" className="btn btn-outline-light text-dark mx-2 mt-2">Ocultar</button>
+  <button type="button" className="btn btn-outline-light text-dark mx-2 mt-2">Editar</button>
+  <button type="button" className="btn btn-outline-light text-dark mx-2 mt-2">Compartir</button>
+      <div className="modal-footer">
+        <button type="button" className="btn btn-dark" data-bs-dismiss="modal">Cancelar</button>
+  </div>
+</div>
+</div>
+</div>
+{/* modal 5 */}
+<div className="modal fade exampleModal5" id="exampleModal5" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div className="modal-dialog m-4 mt-6">
+    <div className="modal-content">
+    <button type="button" className="btn btn-outline-danger mx-2 mt-4" onClick={inProcess5} data-bs-dismiss="modal">Eliminar</button>
   <button type="button" className="btn btn-outline-light text-dark mx-2 mt-2">Archivar</button>
   <button type="button" className="btn btn-outline-light text-dark mx-2 mt-2">Ocultar</button>
   <button type="button" className="btn btn-outline-light text-dark mx-2 mt-2">Editar</button>

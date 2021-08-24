@@ -1,6 +1,7 @@
 import "./Home.css";
 import { Fragment } from "react-is";
 import { Link } from "react-router-dom";
+import logo from "../assets/logoigs.png"
 
 const Home = () => {
   return (
@@ -22,7 +23,7 @@ const Home = () => {
                 viewBox="0 0 16 16"
               >
                 <path
-                  fillRulle="evenodd"
+                  fillRule="evenodd"
                   d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
                 />
               </svg>
@@ -95,23 +96,13 @@ const Home = () => {
             </Link>
           </p>
           <p>
-            <Link to="/Photogram" type="button" className="btn btn-home-icons btn-info m-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="28"
-                height="28"
-                fill="white"
-                className="bi bi-card-image"
-                viewBox="0 0 16 16"
-              >
-                <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
-                <path d="M1.5 2A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13zm13 1a.5.5 0 0 1 .5.5v6l-3.775-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12v.54A.505.505 0 0 1 1 12.5v-9a.5.5 0 0 1 .5-.5h13z" />
-              </svg>
+            <Link to="/Photogram" type="button" className="btn btn-home-icons btn-info m-2" style={{width:54, height:42}}>
+            <img src={logo} style={{width:34, height:30}} alt="" />
             </Link>
           </p>
           <p>
-            <button type="button" className="btn btn-home-icons btn-light m-2">
-              <svg
+            <button type="button" className="btn btn-home-icons btn-light m-2" >
+               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="28"
                 height="28"

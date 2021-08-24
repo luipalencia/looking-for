@@ -11,3 +11,15 @@
     border-radius: .25rem;
     max-width: 100%;
 }
+.images-sec {
+    background-color:#dcdcdc73;
+}
+.user-ig {
+    display: block;
+    margin: auto;
+    padding: 18px 5px 3px 3px;
+}
+.imgs-row {
+    width: 6.5rem;
+    height: 6rem;
+}
